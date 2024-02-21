@@ -61,6 +61,21 @@ leaflet() %>%
                    radius = 1, 
                    color = "#422CB2")
 
+# Maybe even trying to layer this?
+leaflet() %>% 
+  addTiles(group = "Default") %>%
+  addCircleMarkers(data = puffyshark, 
+                   group = "Haploblepharus edwardsii", 
+                   radius = 1, 
+                   color = "#85B22C")%>%
+  addCircleMarkers(data = brownshark, 
+                 group = "Haploblepharus fuscus", 
+                 radius = 1,
+                 color = "#2C85B2")%>%
+  addCircleMarkers(data = darkshark, 
+                   group = "Haploblepharus pictus", 
+                   radius = 1, 
+                   color = "#422CB2")
 
 # Different interactive maps
 mapview(puffyshark, 
